@@ -1,31 +1,20 @@
-import React from 'react';
-import { Star } from 'lucide-react';
+import React, { useState } from 'react';
+import { Star, Play, X } from 'lucide-react';
 
 const reviews = [
   {
-    text: "BrandGeko completely transformed how we present our medical solutions. The talent they provided integrated seamlessly with our dev team.",
-    author: "Dr. Chioma A.",
-    role: "Founder, MedEase",
-    logo: "MedEase",
-    rating: 5
-  },
-  {
-    text: "We needed a full rebrand in 2 weeks and their team didn't just meet the deadline, they crushed it. Unmatched speed.",
-    author: "James Wilson",
-    role: "CEO, LettuceWork",
-    logo: "LettuceWork",
-    rating: 5
-  },
-  {
-    text: "Hiring their talent was the best decision. It's like having a senior creative director and a production team in one.",
-    author: "Sarah O.",
-    role: "Marketing Lead, SATO",
-    logo: "SATO",
-    rating: 5
+    text: "The talent we hired from Sleeka blended seamlessly into our team. He handled design, animation, and video editing with impressive speed and quality, saving us both time and budget.",
+    author: "Emmanuel Okoye",
+    role: "CEO, Felicia Transport",
+    logo: "Felicia Transport",
+    rating: 5,
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
   }
 ];
 
 export const Testimonials: React.FC = () => {
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+
   return (
     <section className="bg-geko-dark py-32 relative overflow-hidden text-white">
        {/* Abstract Background Shapes */}
@@ -34,14 +23,13 @@ export const Testimonials: React.FC = () => {
 
        <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="flex flex-col md:flex-row gap-12 items-start justify-between mb-20">
-             <h2 className="text-5xl md:text-6xl font-serif font-bold leading-tight max-w-2xl">
-                What our Clients Say <br/>
-                {/* <span className="text-geko-accent italic">teams & startups.</span> */}
+             <h2 className="text-5xl md:text-6xl font-bold leading-tight max-w-2xl">
+                What our Clients Say
              </h2>
             
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 items-stretch max-w-2xl mx-auto">
              {reviews.map((review, index) => (
                 <div 
                   key={index} 
@@ -64,14 +52,38 @@ export const Testimonials: React.FC = () => {
                          <h4 className="font-bold text-lg text-geko-dark">{review.author}</h4>
                          <p className="text-sm text-gray-500">{review.role}</p>
                       </div>
-                      <div className="w-10 h-10 rounded-full flex items-center justify-center font-serif font-bold italic text-lg bg-gray-100 text-geko-dark">
-                          {review.logo.substring(0,2)}
-                      </div>
+                      <button
+                        onClick={() => setSelectedVideo(review.videoUrl)}
+                        className="relative w-12 h-12 rounded-full bg-[#47ff01] flex items-center justify-center hover:scale-110 transition-transform group"
+                      >
+                        <div className="absolute inset-0 rounded-full bg-[#47ff01] animate-ping opacity-75"></div>
+                        <Play size={20} className="text-[#5c0386] fill-[#5c0386] relative z-10" />
+                      </button>
                    </div>
                 </div>
              ))}
           </div>
        </div>
+
+       {/* Video Modal */}
+       {selectedVideo && (
+         <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-fade-in">
+           <div className="relative w-full max-w-4xl aspect-video">
+             <button
+               onClick={() => setSelectedVideo(null)}
+               className="absolute -top-12 right-0 text-white hover:text-[#47ff01] transition-colors"
+             >
+               <X size={32} />
+             </button>
+             <iframe
+               src={selectedVideo}
+               className="w-full h-full rounded-lg"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+               allowFullScreen
+             ></iframe>
+           </div>
+         </div>
+       )}
     </section>
   );
 };

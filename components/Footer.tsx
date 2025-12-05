@@ -9,11 +9,8 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <a href="#" className="flex items-center gap-2 text-2xl font-bold tracking-tight mb-4">
-              <div className="w-8 h-8 rounded-full border-2 border-gray-900 flex items-center justify-center">
-                <span className="text-sm italic">Sl</span>
-              </div>
-              <span>sleeka</span>
+            <a href="#" className="flex items-center mb-4">
+              <img src="/assets/Logo_2.png" alt="Sleeka" className="h-8 w-auto" />
             </a>
             <p className="text-gray-600 text-sm leading-relaxed">
               Your creative partner for design, video, and content that drives results.

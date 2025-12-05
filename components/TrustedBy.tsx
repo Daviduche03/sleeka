@@ -2,9 +2,27 @@ import React from 'react';
 
 // Triple the logos to ensure enough content for smooth scrolling on large screens
 const logos = [
-  "LettuceWork", "MedEase", "SATO", "Solvex", "Tetracore", "CROWN",
-  "LettuceWork", "MedEase", "SATO", "Solvex", "Tetracore", "CROWN",
-  "LettuceWork", "MedEase", "SATO", "Solvex", "Tetracore", "CROWN"
+  "/assets/Client logos/1.png",
+  "/assets/Client logos/2.png",
+  "/assets/Client logos/3.png",
+  "/assets/Client logos/4.png",
+  "/assets/Client logos/5.png",
+  "/assets/Client logos/6.png",
+  "/assets/Client logos/7.png",
+  "/assets/Client logos/1.png",
+  "/assets/Client logos/2.png",
+  "/assets/Client logos/3.png",
+  "/assets/Client logos/4.png",
+  "/assets/Client logos/5.png",
+  "/assets/Client logos/6.png",
+  "/assets/Client logos/7.png",
+  "/assets/Client logos/1.png",
+  "/assets/Client logos/2.png",
+  "/assets/Client logos/3.png",
+  "/assets/Client logos/4.png",
+  "/assets/Client logos/5.png",
+  "/assets/Client logos/6.png",
+  "/assets/Client logos/7.png"
 ];
 
 export const TrustedBy: React.FC = () => {
@@ -21,14 +39,8 @@ export const TrustedBy: React.FC = () => {
 
         <div className="flex w-max animate-marquee items-center">
           {logos.map((logo, index) => (
-            <div key={index} className="mx-8 md:mx-12 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-default">
-               <div className="text-3xl md:text-4xl font-bold text-white flex items-center gap-3">
-                   {/* Simulating logo icons with diverse shapes */}
-                   {index % 3 === 0 && <div className="w-8 h-8 rounded-full bg-white/20"></div>}
-                   {index % 3 === 1 && <div className="w-8 h-8 rotate-45 bg-white/20"></div>}
-                   {index % 3 === 2 && <div className="w-8 h-8 rounded-md bg-white/20"></div>}
-                   <span>{logo}</span>
-               </div>
+            <div key={index} className="mx-8 md:mx-12 opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-default">
+               <img src={logo} alt={`Client ${index + 1}`} className="h-16 md:h-20 w-auto object-contain" />
             </div>
           ))}
         </div>

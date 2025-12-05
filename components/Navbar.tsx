@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '#' },
@@ -29,11 +29,8 @@ export const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between text-white">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 text-2xl font-bold font-sans tracking-tight">
-          <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center">
-            <span className="text-sm font-serif italic">Sl</span>
-          </div>
-          <span>sleeka</span>
+        <a href="#" className="flex items-center">
+          <img src="/assets/Logo_2.png" alt="Sleeka" className="h-8 md:h-10 w-auto" />
         </a>
 
         {/* Desktop Nav */}
@@ -51,8 +48,9 @@ export const Navbar: React.FC = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <button className="bg-white text-geko-dark px-6 py-2.5 rounded-full font-bold text-sm hover:bg-gray-100 transition-colors">
+          <button className="px-6 py-2.5 rounded-full font-bold text-sm transition-all flex items-center gap-2 group shadow-lg hover:shadow-xl hover:scale-105 duration-300" style={{ backgroundColor: '#47ff01', color: '#000' }}>
             Get in Touch
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
 
@@ -102,14 +100,17 @@ export const Navbar: React.FC = () => {
             </a>
           ))}
           <button
-            className="bg-white text-geko-dark w-full py-3 rounded-full font-bold mt-4 transform transition-all duration-300 hover:scale-105"
+            className="w-full py-3 rounded-full font-bold mt-4 transform transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 group"
             style={{
+              backgroundColor: '#47ff01',
+              color: '#000',
               transitionDelay: isMobileMenuOpen ? `${navLinks.length * 50}ms` : '0ms',
               transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(-20px)',
               opacity: isMobileMenuOpen ? 1 : 0,
             }}
           >
             Get in Touch
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
       </div>

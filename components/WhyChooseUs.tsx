@@ -12,7 +12,7 @@ const features = [
     icon: TrendingUp,
     title: 'Revenue-Driven Talent',
     description:
-      "Our talents don't just create content - they're business partners. Vetted professionals who understand marketing, KPIs, and revenue, they integrate seamlessly, work independently, and deliver content that accelerates campaigns.",
+      "Our talents don't just create content - they're business partners. Vetted professionals who understand marketing, KPIs, and revenue, they integrate seamlessly, work independently, and deliver content that accelerates campaigns and drives measurable growth.",
   }
 ];
 

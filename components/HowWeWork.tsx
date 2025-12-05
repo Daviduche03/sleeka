@@ -1,12 +1,12 @@
 import React from 'react';
-import { Users, Star } from 'lucide-react';
+import { Users, Star, ArrowRight } from 'lucide-react';
 
 export const HowWeWork: React.FC = () => {
   return (
     <section className="bg-white py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="mb-20">
-          <h2 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-geko-dark">
+          <h2 className="text-5xl md:text-7xl font-bold mb-6 text-geko-dark">
             How we work
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl leading-relaxed">
@@ -38,8 +38,9 @@ export const HowWeWork: React.FC = () => {
               focus on growing your business.
             </p>
 
-            <button className="bg-[#47ff01] text-black px-8 py-4 rounded-full font-bold text-lg hover:brightness-110 transition-all w-fit">
+            <button className="px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center gap-3 group shadow-xl hover:shadow-2xl hover:scale-105 duration-300 w-fit" style={{ backgroundColor: '#47ff01', color: '#000' }}>
               Learn More!
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 
@@ -65,8 +66,9 @@ export const HowWeWork: React.FC = () => {
               smarter, faster, and more productively within modern teams.
             </p>
 
-            <button className="bg-[#47ff01] text-black px-8 py-4 rounded-full font-bold text-lg hover:brightness-110 transition-all w-fit">
+            <button className="px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center gap-3 group shadow-xl hover:shadow-2xl hover:scale-105 duration-300 w-fit" style={{ backgroundColor: '#47ff01', color: '#000' }}>
               Learn More!
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
         </div>

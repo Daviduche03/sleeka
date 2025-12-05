@@ -14,10 +14,12 @@ export const WhatWeDo: React.FC = () => {
     <section id="services" className="bg-white py-24">
       <div className="container mx-auto px-6 md:px-12">
         <div className="mb-20">
-           <h2 className="text-5xl md:text-7xl font-serif font-bold text-geko-dark mb-6">What We Do</h2>
-           <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl leading-relaxed">
-             We shift perceptions and position brands exactly where they want to be — 
-             in the hearts and minds of the right audience.
+           <h2 className="text-5xl md:text-7xl font-bold text-geko-dark mb-6">What We Do</h2>
+           <p className="text-xl md:text-2xl text-gray-600 font-light max-w-4xl leading-relaxed">
+             We provide end-to-end creative support from design, motion, and social media management to content strategy all delivered through a flexible monthly plan.
+           </p>
+           <p className="text-xl md:text-2xl text-gray-600 font-light max-w-4xl leading-relaxed mt-6">
+             For organizations that demand deeper brand alignment and faster turnaround, we also provide trained creative talent who integrate directly into in-house teams, ensuring consistency, speed, and growth.
            </p>
         </div>
 

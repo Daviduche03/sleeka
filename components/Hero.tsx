@@ -7,21 +7,18 @@ export const Hero: React.FC = () => {
       {/* Main Content */}
       <div className="container mx-auto px-6 md:px-12 text-center relative z-10 flex-grow flex flex-col justify-center pt-16 md:pt-20">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8">
-          Design & Marketing That <br />
-          <span className="italic font-light">Hooks</span> Your Audience.
+          Scale 10X faster with <br />
+          <span className="italic font-light">world-class</span> creative teams on demand.
         </h1>
         
-        <p className="max-w-2xl mx-auto text-lg md:text-lg text-gray-200 font-light leading-relaxed mb-16">
-          From Branding to App Design and Marketing, forward-thinking brands 
-          are always intentional about captivating the right audience. 
-          <br className="hidden md:block" />
-          <span className="font-bold text-white">BrandGeko helps them win.</span>
+        <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-200 font-light leading-relaxed mb-16">
+          Get consistent, high-converting content that fuels business growth powered by top African talent.
         </p>
 
         {/* CTA Button */}
         <div className="flex justify-center mb-12">
             <button className="px-10 py-5 rounded-full font-bold text-lg transition-all flex items-center gap-3 group shadow-xl hover:shadow-2xl hover:scale-105 duration-300" style={{ backgroundColor: '#47ff01', color: '#000' }}>
-              Start a Project
+              Book a Free Call
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
         </div>
