@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BrandGeko - Design & Marketing Agency</title>
+    <title>Sleeka: Creative Teams On-Demand</title>
+    <meta name="description" content="We are a creative solutions company that helps businesses scale through consistent, high-converting creative output powered by top African talent." />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,10 +43,26 @@
         }
     </script>
     <style>
+        @font-face {
+            font-family: 'MTN Brighter Sans';
+            src: url('/assets/Fonts/mtn-brighter-sans-bold.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        
         body {
             font-family: 'Poppins', sans-serif;
         }
-        /* Custom Scrollbar for horizontal sections */
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'MTN Brighter Sans', sans-serif !important;
+        }
         
         .no-scrollbar::-webkit-scrollbar {
             display: none;
@@ -53,9 +70,7 @@
         
         .no-scrollbar {
             -ms-overflow-style: none;
-            /* IE and Edge */
             scrollbar-width: none;
-            /* Firefox */
         }
     </style>
     <script type="importmap">
