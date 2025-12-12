@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
             className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full font-bold text-base sm:text-lg transition-all flex items-center gap-2 md:gap-3 group shadow-xl hover:shadow-2xl hover:scale-105 duration-300 w-full sm:w-auto justify-center" 
             style={{ backgroundColor: '#47ff01', color: '#000' }}
           >
-            Book a Free Call
+            Book a Discovery Call
             <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>

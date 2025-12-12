@@ -55,7 +55,7 @@ export const Navbar: React.FC = () => {
             className="px-6 py-2.5 rounded-full font-bold text-sm transition-all flex items-center gap-2 group shadow-lg hover:shadow-xl hover:scale-105 duration-300" 
             style={{ backgroundColor: '#47ff01', color: '#000' }}
           >
-            Book a free call
+            Book a Discovery Call
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
@@ -118,7 +118,7 @@ export const Navbar: React.FC = () => {
               opacity: isMobileMenuOpen ? 1 : 0,
             }}
           >
-            Book a free call
+            Book a Discovery Call
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
