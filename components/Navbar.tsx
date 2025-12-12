@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Home', href: '#' },
+  { label: 'Home', href: '#home' },
   { label: 'Our Work', href: '#work' },
+  { label: 'Our Talent', href: '#talent' },
   { label: 'Services', href: '#services' },
   { label: 'About', href: '#about' },
-  { label: 'Journal', href: '#journal' },
 ];
 
 export const Navbar: React.FC = () => {
@@ -48,10 +48,16 @@ export const Navbar: React.FC = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <button className="px-6 py-2.5 rounded-full font-bold text-sm transition-all flex items-center gap-2 group shadow-lg hover:shadow-xl hover:scale-105 duration-300" style={{ backgroundColor: '#47ff01', color: '#000' }}>
-            Get in Touch
+          <a 
+            href="https://calendar.app.google/2nWbeLXuC52dvZtq5" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="px-6 py-2.5 rounded-full font-bold text-sm transition-all flex items-center gap-2 group shadow-lg hover:shadow-xl hover:scale-105 duration-300" 
+            style={{ backgroundColor: '#47ff01', color: '#000' }}
+          >
+            Book a free call
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -99,7 +105,10 @@ export const Navbar: React.FC = () => {
               {link.label}
             </a>
           ))}
-          <button
+          <a
+            href="https://calendar.app.google/2nWbeLXuC52dvZtq5"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full py-3 rounded-full font-bold mt-4 transform transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 group"
             style={{
               backgroundColor: '#47ff01',
@@ -109,9 +118,9 @@ export const Navbar: React.FC = () => {
               opacity: isMobileMenuOpen ? 1 : 0,
             }}
           >
-            Get in Touch
+            Book a free call
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         </div>
       </div>
     </nav>

@@ -21,16 +21,24 @@ function App() {
       <div className="min-h-screen bg-white">
         <Navbar />
       <main>
-        <div className="relative">
+        <div id="home" className="relative">
           <Hero />
           {/* Video Section acts as the bridge between Hero and TrustedBy */}
           <VideoSection />
           <TrustedBy />
         </div>
-        <AgencyDescription />
-        <OurWorks />
-        <HowWeWork />
-        <TalentShowcase />
+        <div id="about">
+          <AgencyDescription />
+        </div>
+        <div id="work">
+          <OurWorks />
+        </div>
+        <div id="services">
+          <HowWeWork />
+        </div>
+        <div id="talent">
+          <TalentShowcase />
+        </div>
         <Testimonials />
         <WhyChooseUs />
         {/* <CTASection /> */}
