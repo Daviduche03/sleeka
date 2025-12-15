@@ -2,28 +2,28 @@ import React from 'react';
 
 const works = [
   {
-    id: 1,
+    id: 'felicia-transport',
+    title: 'Felicia Transport',
+    tags: 'Branding, Identity design, Merchandise',
+    image: '/assets/works/VanDesign.jpg',
+  },
+  {
+    id: 'premiabn',
     title: 'PremiaBN',
     tags: 'Illustration, Animated explainer video',
     image: '/assets/works/2.jpg',
   },
   {
-    id: 2,
+    id: 'bluechip-technologies',
     title: 'Bluechip Technologies',
     tags: 'Motion, Video editing',
     image: '/assets/works/Olumide Soyombo Bluechip_1000.jpg',
   },
   {
-    id: 3,
+    id: 'emsxchange',
     title: 'EmsXchange',
     tags: 'Design, Motion, Video editing',
     image: '/assets/works/Big5Annoucement.jpg',
-  },
-  {
-    id: 4,
-    title: 'Felicia Transport',
-    tags: 'Branding, Identity design, Merchandise',
-    image: '/assets/works/VanDesign.jpg',
   },
 ];
 
@@ -42,23 +42,24 @@ export const OurWorks: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {works.map((work, index) => (
-            <div
+            <a
               key={work.id}
-              className="group animate-fade-in-up"
+              href={`#/case-study/${work.id}`}
+              className="group animate-fade-in-up block"
               style={{ animationDelay: `${(index + 1) * 150}ms` }}
             >
-              <div className="rounded-3xl overflow-hidden mb-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              <div className="rounded-3xl overflow-hidden mb-6 shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer">
                 <img
                   src={work.image}
                   alt={work.title}
                   className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-2 group-hover:text-geko-primary transition-colors duration-300">
+              <h3 className="text-3xl font-bold text-gray-900 mb-2 group-hover:text-[#5c0386] transition-colors duration-300">
                 {work.title}
               </h3>
               <p className="text-lg text-gray-600">- {work.tags}</p>
-            </div>
+            </a>
           ))}
         </div>
       </div>

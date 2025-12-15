@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { VideoSection } from './components/VideoSection';
@@ -13,8 +13,30 @@ import { WhatWeDo } from './components/WhatWeDo';
 import { CTASection } from './components/CTASection';
 import { Footer } from './components/Footer';
 import { Preloader } from './components/Preloader';
+import { CaseStudyPage } from './pages/CaseStudyPage';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash.startsWith('#/case-study/')) {
+        setCurrentPage('case-study');
+      } else {
+        setCurrentPage('home');
+      }
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  if (currentPage === 'case-study') {
+    return <CaseStudyPage />;
+  }
+
   return (
     <>
       <Preloader />
