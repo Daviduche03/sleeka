@@ -33,6 +33,14 @@ export const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({
       {/* Content Section - Centered on Desktop */}
       <div className="container mx-auto px-6 md:px-12 pb-24 max-w-4xl">
         <div className="space-y-12">
+          {/* Header Image */}
+          <div className="rounded-3xl overflow-hidden shadow-2xl mb-12">
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-auto object-cover"
+            />
+          </div>
           {/* Overview */}
           <div>
             <h2 className="text-3xl font-bold text-white mb-4">
