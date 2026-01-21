@@ -2,12 +2,6 @@ import React from 'react';
 
 const works = [
   {
-    id: 'felicia-transport',
-    title: 'Felicia Transport',
-    tags: 'Branding, Identity design, Merchandise',
-    image: '/assets/works/VanDesign.jpg',
-  },
-  {
     id: 'premiabn',
     title: 'PremiaBN',
     tags: 'Illustration, Animated explainer video',
@@ -24,6 +18,12 @@ const works = [
     title: 'EmsXchange',
     tags: 'Design, Motion, Video editing',
     image: '/assets/works/Big5Annoucement.jpg',
+  },
+  {
+    id: 'felicia-transport',
+    title: 'Felicia Transport',
+    tags: 'Branding, Identity design, Merchandise',
+    image: '/assets/works/VanDesign.jpg',
   },
 ];
 
