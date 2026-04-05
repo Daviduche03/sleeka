@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { VideoSection } from './components/VideoSection';
@@ -9,66 +10,64 @@ import { HowWeWork } from './components/HowWeWork';
 import { TalentShowcase } from './components/TalentShowcase';
 import { Testimonials } from './components/Testimonials';
 import { WhyChooseUs } from './components/WhyChooseUs';
-import { WhatWeDo } from './components/WhatWeDo';
-import { CTASection } from './components/CTASection';
 import { Footer } from './components/Footer';
 import { Preloader } from './components/Preloader';
 import { CaseStudyPage } from './pages/CaseStudyPage';
+import { CreativeInfrastructure } from './pages/CreativeInfrastructure';
 
-function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+function ScrollToTop() {
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      if (hash.startsWith('#/case-study/')) {
-        setCurrentPage('case-study');
-      } else {
-        setCurrentPage('home');
-      }
-    };
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
-    handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
+  return null;
+}
 
-  if (currentPage === 'case-study') {
-    return <CaseStudyPage />;
-  }
-
+function HomePage() {
   return (
     <>
       <Preloader />
       <div className="min-h-screen bg-white">
         <Navbar />
-      <main>
-        <div id="home" className="relative">
-          <Hero />
-          {/* Video Section acts as the bridge between Hero and TrustedBy */}
-          <VideoSection />
-          <TrustedBy />
-        </div>
-        <div id="about">
-          <AgencyDescription />
-        </div>
-        <div id="work">
-          <OurWorks />
-        </div>
-        <div id="services">
-          <HowWeWork />
-        </div>
-        <div id="talent">
-          <TalentShowcase />
-        </div>
-        <Testimonials />
-        <WhyChooseUs />
-        {/* <CTASection /> */}
-      </main>
-      <Footer />
-      
-    </div>
+        <main>
+          <div id="home" className="relative">
+            <Hero />
+            <VideoSection />
+            <TrustedBy />
+          </div>
+          <div id="about">
+            <AgencyDescription />
+          </div>
+          <div id="work">
+            <OurWorks />
+          </div>
+          <div id="services">
+            <HowWeWork />
+          </div>
+          <div id="talent">
+            <TalentShowcase />
+          </div>
+          <Testimonials />
+          <WhyChooseUs />
+        </main>
+        <Footer />
+      </div>
     </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/case-study/:id" element={<CaseStudyPage />} />
+        <Route path="/creative-infrastructure" element={<CreativeInfrastructure />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

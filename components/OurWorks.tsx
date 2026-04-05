@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const works = [
   {
@@ -42,9 +43,9 @@ export const OurWorks: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {works.map((work, index) => (
-            <a
+            <Link
               key={work.id}
-              href={`#/case-study/${work.id}`}
+              to={`/case-study/${work.id}`}
               className="group animate-fade-in-up block"
               style={{ animationDelay: `${(index + 1) * 150}ms` }}
             >
@@ -59,7 +60,7 @@ export const OurWorks: React.FC = () => {
                 {work.title}
               </h3>
               <p className="text-lg text-gray-600">- {work.tags}</p>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
