@@ -97,7 +97,7 @@ export const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({
                   className="flex items-start gap-3 text-white/90 text-base md:text-lg leading-relaxed"
                 >
                   <span className="text-white font-bold text-xl flex-shrink-0">
-                    {index + 1}.
+                    •
                   </span>
                   <span>{result}</span>
                 </li>
@@ -130,24 +130,31 @@ export const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({
               {section.description}
             </p>
             
-            {/* Images Grid */}
+            {/* Images/Videos Grid */}
             <div className="space-y-6">
-              {section.images.map((img, imgIndex) => (
+              {section.images.map((media, imgIndex) => (
                 <div key={imgIndex} className="rounded-2xl overflow-hidden">
-                  <img
-                    src={img}
-                    alt={`${section.title} ${imgIndex + 1}`}
-                    className="w-full h-auto object-cover"
-                  />
+                  {media.endsWith('.mp4') ? (
+                    <video
+                      src={media}
+                      controls
+                      className="w-full h-auto"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <img
+                      src={media}
+                      alt={`${section.title} ${imgIndex + 1}`}
+                      className="w-full h-auto object-cover"
+                    />
+                  )}
                 </div>
               ))}
             </div>
           </div>
         </div>
       ))}
-      
-      <div className="h-1">
-      </div>
     </div>
   );
 };

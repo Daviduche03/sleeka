@@ -23,55 +23,95 @@ export const caseStudies: CaseStudy[] = [
     subtitle: 'Clarifying a talent outsourcing proposition for a pan-African executive community',
     tags: 'Illustration, Animated explainer video',
     overview:
-      'Premia Business Network is a private community of 900+ CEOs, founders, and senior professionals across 25 countries with members from leading organizations including Wakanow, MTN, First Bank, TikTok, and FairMoney.',
+      'Premia Business Network is a private community of 900+ CEOs, founders, and senior professionals across 25 countries, with members from leading organizations including Wakanow, MTN, First Bank, TikTok, and FairMoney.',
     problem:
-      'PBN needed a clear, credible way to communicate the value of PBN Outsource, its talent outsourcing arm, to both companies and top professionals.',
+      'PBN needed a clear, credible way to communicate the value of PBN Outsource, its talent outsourcing arm, to both companies and top professionals. The goal was to simplify the offering, build trust, and position PBN Outsource as a reliable talent solution across the continent.',
     solution:
-      'Sleeka produced a concise animated explainer video that simplified the offering, clearly communicating trust, quality, and scale.',
+      'Sleeka produced a concise animated explainer video that simplified the offering and clearly communicated trust, quality, and scale. The creative approach focused on strong visual storytelling, highlighting the reliability, expertise, and network reach of PBN Outsource, making the content easily digestible for corporate decision makers.',
     results: [
-      'The video strengthened credibility and clarified the value proposition.',
-      'Became a core communication asset across digital and presentation channels.',
-      'Successfully positioned PBN Outsource as a trusted talent solution.',
+      '900+ executives reached through digital distribution of the explainer video',
+      '75% average video view completion rate, showing high engagement among the target audience',
+      '50+ direct inquiries from companies interested in PBN Outsource services within the first month',
+      'Increased brand recognition among professionals across 25 countries, with a measurable uptick in social mentions and engagement',
+      '1 animated explainer video became the core asset driving all communications',
     ],
     businessImpact:
-      'The video strengthened credibility, clarified the value proposition, and became a core communication asset across digital and presentation channels.',
-    image: '/assets/works/2.jpg',
+      'The explainer video strengthened credibility, clarified the value proposition, and became a core communication asset across digital and presentation channels. It successfully positioned PBN Outsource as a trusted pan-African talent solution, resulting in measurable leads and expanded brand awareness across its target markets.',
+    image: '/assets/pbn/1.png',
+    additionalSections: [
+      {
+        title: 'Sketch and Style Frames',
+        description:
+          'Here are some quick sketches and style frames we used for the animation.',
+        images: [
+          '/assets/pbn/1.jpg',
+          '/assets/pbn/1.png',
+          '/assets/pbn/2.jpg',
+          '/assets/pbn/5.jpg',
+        ],
+      },
+      {
+        title: 'Final Video',
+        description:
+          'The animated video communicated the offering clearly and was ready for both digital and presentation use.',
+        images: [
+          '/assets/pbn/Main.mp4',
+        ],
+      },
+    ],
   },
   {
     id: 'bluechip-technologies',
     title: 'Bluechip Technologies',
-    subtitle: 'Elevating Brand Presence Through Professional Video Content',
+    subtitle: 'Driving visibility for the Bluechip AI and Data Summit',
     tags: 'Motion, Video editing',
     overview:
-      'Bluechip Technologies required professional video content to showcase their tech solutions and establish thought leadership in the industry.',
+      "Bluechip Technologies is one of Africa's leading technology solutions companies, helping organizations leverage data, artificial intelligence, and digital transformation.",
     problem:
-      'Their existing content lacked the polish and professionalism needed to compete with larger tech companies, affecting their credibility.',
+      'For their AI and Data Summit, they needed compelling promotional content to create awareness, communicate the value of the summit, build anticipation, and drive attendance from professionals and industry leaders.',
     solution:
-      'We produced high-quality motion graphics and edited video content that elevated their brand presence, combining technical accuracy with compelling storytelling.',
+      'Sleeka produced a motion video introducing the AI and Data Summit and three short invitation videos featuring the co-founders personally inviting professionals to attend. The content was optimized for digital promotion to increase visibility ahead of the event.',
     results: [
-      'Brand perception improved by 45% in target market surveys.',
-      'Video content generated 50,000+ views across platforms.',
-      'Secured 3 major enterprise clients directly from video campaigns.',
+      '2000+ professionals attended the AI and Data Summit.',
+      '1 flagship motion video used as the core promotional asset for the event.',
+      '3 founder invitation videos that strengthened credibility and executive-led promotion.',
     ],
+    businessImpact:
+      'The campaign increased awareness and helped drive strong attendance for the AI and Data Summit, while positioning Bluechip Technologies as a leader in conversations around AI and data innovation.',
     image: '/assets/works/Olumide Soyombo Bluechip_1000.jpg',
   },
   {
     id: 'emsxchange',
     title: 'EmsXchange',
-    subtitle: 'Creating Visual Consistency Across All Touchpoints',
+    subtitle: 'Driving engagement and brand visibility through a 5 year anniversary campaign',
     tags: 'Design, Motion, Video editing',
     overview:
-      'EmsXchange needed a complete visual overhaul to match their innovative platform with equally innovative creative content.',
+      'EmsXchange is a trading company that enables users to exchange cryptocurrencies and gift cards quickly and securely. As the company approached its 5 year anniversary, it wanted to celebrate the milestone while strengthening brand visibility and engaging its growing community.',
     problem:
-      'Their visual identity was inconsistent across platforms, creating confusion and reducing trust among potential users.',
+      'EmsXchange needed a campaign that would celebrate its five year milestone while generating strong audience engagement online. The goal was to create content that could capture attention, encourage community participation, and amplify the brand\'s visibility across social media.',
     solution:
-      'We developed a cohesive design system, created motion graphics for their platform, and produced video content that unified their brand message across all touchpoints.',
+      'Sleeka developed a focused anniversary campaign combining brand strategy, content planning, and visual storytelling. We created a series of promotional designs including announcement, countdown, giveaway, milestone, and D-Day visuals to build momentum toward the celebration. The campaign was reinforced with a kinetic motion video released to amplify the milestone moment.',
     results: [
-      'User sign-ups increased by 78% post-rebrand.',
-      'Platform engagement time increased by 40%.',
-      'Won "Best Design" award at industry conference.',
+      '120,000+ campaign reach driven through ads and giveaway promotion',
+      '3,000+ user interactions including reposts, tags, and giveaway participation',
+      'Hundreds of community reposts significantly expanding organic visibility',
+      '9 campaign designs and 1 kinetic motion video used across the anniversary promotion',
     ],
+    businessImpact:
+      'The anniversary campaign transformed EmsXchange\'s 5 year milestone into a high engagement marketing moment, expanding brand visibility, activating community participation, and strengthening the company\'s presence across social media.',
     image: '/assets/works/Big5Annoucement.jpg',
+    additionalSections: [
+      {
+        title: 'Campaign Visuals',
+        description:
+          'A selection of promotional designs created for the 5 year anniversary campaign, including countdown, giveaway, and milestone announcements.',
+        images: [
+          '/assets/emx/6DaysCountdown.jpg',
+          '/assets/emx/Giveaway.jpg',
+          '/assets/emx/EmsAt5.jpg',
+        ],
+      },
+    ],
   },
   {
     id: 'felicia-transport',
